@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+		<title>家庭作業04(B3B24黃筱媛)</title>
+	<style>
+        h4 {
+            color: red
+        }
+        h3{
+            color: purple
+        }
+        p {
+            margin: 5px
+        }
+        div {
+		color: blue
+		}
+        td{
+            border: 1px solid black;
+            padding-left: 20px;
+        }
+    
+	</style>
+</head>
+	<body>
+       <script>
+        document.write("<table align='center'>");
+        document.write("<p><h3>九九乘法表</h3></p>");
+        document.write('<ul class="tale">');
+        document.write("<table cellspacing='0'>");
+        for(var i=1;i<=9;i++){
+            document.write("<tr>");
+        for(var j=1;j<=9;j++){
+            document.write("<td style='border=1px solid;'>"+j+"*"+i+"="+j*i+"</td>");
+        }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+        </script>
+	</body>
+</html>
