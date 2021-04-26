@@ -32,18 +32,18 @@
 	<button onclick="shoppingInfo()"><h4>結帳</h4></button>	
 	<div id="demo"></div>	
     <script>
-             var text = "<h4>您的購物資訊如下：</h4>";
-             var fruit = function (fruitType,fruitPrice,no){
-                 this.Type = fruitType;
-                 this.Price = fruitPrice;
-                 this.subTotal = function (no){
+        var text = "<h4>您的購物資訊如下：</h4>";
+        var fruit = function (fruitType,fruitPrice, no){
+            this.Type = fruitType;
+            this.Price = fruitPrice;
+            this.subTotal = function (no){
                      text += "水果種類:" + this.Type + ";共" + no + "單位<br>";
                      text += "價格小計:" + this.Price * no + "元<br>";
                  };
              };
-             var fruit01 = new fruit ("愛文芒果(一箱)",475,0);
-             var fruit02 = new fruit ("有機木瓜(6台斤)",435,0);
-             var fruit03 = new fruit ("黑鑽石桑椹(5台斤)",749,0);
+        var fruit01 = new fruit ("愛文芒果(一箱)",475,0);
+        var fruit02 = new fruit ("有機木瓜(6台斤)",435,0);
+        var fruit03 = new fruit ("黑鑽石桑椹(5台斤)",749,0);
         function shoppingInfo() {
              var x = document.getElementById("form01");
              var item = "";
@@ -75,6 +75,8 @@
                             fruit03.subTotal(fruit03.no);
                             break;
                 }
+            }
+        }
                 text += "價格合計：" + sumToPay + "元<br>";
                 document.getElementById("demo").innerHTML =text;
         }
